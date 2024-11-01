@@ -33,8 +33,8 @@ const NavBar = () => {
             </div>
             <div className="navbar-center hidden lg:flex">
                 <ul className="menu menu-horizontal px-1">
-                    <NavLink className={`m-2 font-bold`} to ="/">Home</NavLink>
-                    <NavLink className={`m-2 font-bold`} to ="/deshboard">DeshBoard</NavLink>
+                    <NavLink className={`m-2 px-4 py-2 font-bold text-base`} to ="/">Home</NavLink>
+                    <NavLink className={`m-2 px-4 py-2 font-bold text-base`} to ="/deshboard">DeshBoard</NavLink>
                 </ul>
             </div>
             <div className="navbar-end">
