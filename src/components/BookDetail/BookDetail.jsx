@@ -1,4 +1,5 @@
 import { useLoaderData, useParams } from "react-router-dom";
+import { addToStoredReadList, addToStoredWishList } from "../../Utility/addToDB";
 
 
 const BookDetail = () => {
@@ -11,12 +12,20 @@ const BookDetail = () => {
 
     const book = data.find(book => book.bookId === id)
     const {image,bookName,author,category,review,tags,totalPages,publisher,yearOfPublishing,rating} = book;
+
+    const handleMarkAsRead = (id) =>{
+       addToStoredReadList(id);
+    }
+
+    const handleWishList = (id) => {
+        addToStoredWishList(id);
+    }
    
 
     return (
         <div className="flex gap-5">
-            <div className=" py-20 bg-gray-100 rounded-xl w-1/2">
-                <img className="w-[200px] mx-auto" src={image} alt="" />
+            <div className=" py-20 bg-gray-100 rounded-xl w-1/2 flex items-center">
+                <img className="w-[200px] mx-auto " src={image} alt="" />
             </div>
 
             <div className="w-1/2">
@@ -39,8 +48,8 @@ const BookDetail = () => {
                 <p className="text-md my-1 ">Rating: <span className="font-bold">{rating}</span></p>
 
                 <div className="my-5">
-                    <button className="btn btn-sm ">Small</button>
-                    <button className="btn btn-sm mx-4">Small</button>
+                    <button onClick={()=> handleMarkAsRead(id)} className="btn btn-outline ">Mark as read</button>
+                    <button onClick={()=> handleWishList(id)} className="btn btn-accent mx-4 text-white"> Add to Wishlist</button>
 
                 </div>
 
