@@ -1,3 +1,4 @@
+import { toast } from "react-toastify";
 
 
 
@@ -22,6 +23,7 @@
             storedList.push(id);
             const storedListSrt = JSON.stringify(storedList);
             localStorage.setItem('read-list',storedListSrt)
+            toast('This book is added on your read lis')
         }
     }
 
