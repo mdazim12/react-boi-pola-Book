@@ -54,5 +54,5 @@
 
 
 
-    export {addToStoredReadList,addToStoredWishList};
+    export {addToStoredReadList,addToStoredWishList,getStoredMarkList};
 
