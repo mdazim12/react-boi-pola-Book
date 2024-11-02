@@ -25,6 +25,7 @@ const NavBar = () => {
                         
                         <NavLink to ="/">Home</NavLink>
                         <NavLink to ="/deshboard">DeshBoard</NavLink>
+                        <NavLink to ="/listed-books">Listed Books</NavLink>
                     </ul>
                 </div>
                <NavLink to = '/'>
@@ -35,6 +36,7 @@ const NavBar = () => {
                 <ul className="menu menu-horizontal px-1">
                     <NavLink className={`m-2 px-4 py-2 font-bold text-base`} to ="/">Home</NavLink>
                     <NavLink className={`m-2 px-4 py-2 font-bold text-base`} to ="/deshboard">DeshBoard</NavLink>
+                    <NavLink className={`m-2 px-4 py-2 font-bold text-base`} to ="/listed-books">Listed Books</NavLink>
                 </ul>
             </div>
             <div className="navbar-end">
